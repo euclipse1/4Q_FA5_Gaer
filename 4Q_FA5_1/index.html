@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        while (true) {
+            var input = prompt("Please enter a number:");
+            var num = parseInt(input);
+            
+            if (!isNaN(num)) {
+                shape(num);
+                break;
+            } else {
+                alert("That's not a valid number. Please try again.");
+            }
+        }
+
+        function shape(num) {
+            if (num % 2 === 1){ //odd
+                for (var i = num; i >= 1; i--) {
+                for (var j = 0; j < num; j++) {
+                    document.write(i + " ");
+                }
+                document.write("<br>");
+            }
+            } 
+
+            else{ //even
+                for (var a = num; a >= 1; a--) {
+                    for (var b = 0; b < a; b++) {
+                        document.write(a + " ");
+                    }
+                    document.write("<br>");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

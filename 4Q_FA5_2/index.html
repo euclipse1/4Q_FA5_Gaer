@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="userCon">
+    <button onclick="add()">Add</button>
+    <button onclick="remove()">Remove</button>
+    <p id="display"></p>
+
+    <script>
+        var user = [];
+
+        function displayUser(){
+            document.getElementById("display").innerHTML = user;
+        }
+        
+        function add(){
+            var contact = document.getElementById("userCon");
+            var name = contact.value;
+        
+            if (user.length >= 7) {
+            user.shift();
+            }
+
+            user.push(name);
+            document.getElementById("display").innerHTML = user;
+        }
+
+        function remove(){
+            user.pop();
+            document.getElementById("display").innerHTML = user;
+        }
+    </script>
+</body>
+</html>
